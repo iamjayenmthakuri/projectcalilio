@@ -14,6 +14,7 @@ import Subscription from "./SettingComponent/Biling/Subscription";
 import PaymentMethod from "./SettingComponent/Biling/paymentMethod";
 import Audio from "./SettingComponent/Application Setting/Audio";
 import Notification from "./SettingComponent/Application Setting/Notification";
+import PageNotFound from "./pages/PageNotFound404";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
           </Route>
           <Route path="contact" element={<Contact />} />
           <Route path="bulksms" element={<Bulksms />} />
+          <Route path="*" element={<PageNotFound />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>
