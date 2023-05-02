@@ -13,14 +13,11 @@ import userPlus from "../Images/userplus.svg";
 import contactIcon from "../Images/contactIcon.svg";
 
 const StyledText = styled(Text)`
-  /* width: 80px;
-  height: 28px; */
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 28px;
   color: #101828;
-  background-color: white;
 `;
 const StyledImage = styled(Image)`
   size-adjust: 10px;
@@ -34,44 +31,29 @@ const StyledButton = styled(Button)`
 function Contact() {
   return (
     <>
-      <Flex margin={15} bg={"white"} gap={1} alignItems={"center"}>
+      <Flex margin={15} gap={1} alignItems={"center"}>
         <StyledText>Contacts</StyledText>
-        <Image src={contact} bg={"white"} />
+        <Image src={contact} />
       </Flex>
-      <Flex
-        backgroundColor={"white"}
-        alignItems="center"
-        justifyContent="center"
-      >
+      <Flex alignItems="center" justifyContent="center">
         <Container
           display={"grid"}
           maxW="container.md"
-          backgroundColor={"white"}
           placeItems={"center"}
           gap={4}
         >
-          <Grid
-            placeItems={"center"}
-            marginTop={"170px"}
-            backgroundColor={"white"}
-            gap={2}
-          >
-            <Image src={contactIcon} boxSize={134} background={"White"} />
-            <Heading as={"Heading"} background={"White"} fontSize={18}>
+          <Grid placeItems={"center"} marginTop={"170px"} gap={2}>
+            <Image src={contactIcon} boxSize={134} />
+            <Heading as={"Heading"} fontSize={18}>
               No Contacts
             </Heading>
-            <Flex
-              gap={-2}
-              flexDirection={"column"}
-              alignItems={"center"}
-              backgroundColor={"white"}
-            >
-              <Text bg={"white"} fontSize={14}>
+            <Flex gap={-2} flexDirection={"column"} alignItems={"center"}>
+              <Text fontSize={14}>
                 No existing contacts. Add contacts to start conversation
               </Text>
-              <Text bg={"whiteAlpha.900"}>
+              <Text>
                 or
-                <Text fontSize={14} as={"span"} bg={"white"} color={"#5964FF"}>
+                <Text fontSize={14} as={"span"} color={"#5964FF"}>
                   upload
                 </Text>
                 a CSV file.

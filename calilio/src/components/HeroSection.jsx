@@ -31,14 +31,13 @@ import { useRecoilValue, useSetRecoilState } from "recoil";
 const StyledFlex = styled(Flex)`
   align-items: center;
   gap: 10px;
-  background-color: white;
   height: 36px;
   padding: 4px;
   &:hover {
-    background-color: #c2bfbf;
+    color: #c2bfbf;
   }
   &:active {
-    background-color: #2c4b27;
+    color: #2c4b27;
   }
 `;
 
@@ -85,10 +84,8 @@ const Wrapper = styled(Flex)`
 `;
 
 const StyledImage = styled(Image)`
-  background-color: white;
   cursor: pointer;
   &:hover {
-    background-color: #d8d7d7;
     color: #000000;
   }
 `;
@@ -106,28 +103,28 @@ function HeroSection() {
         <List>
           <ListItem>
             <StyledFlex>
-              <Image src={Dashboard} background={"white"} />
+              <Image src={Dashboard} />
               <StyledLink to="/">Dashboard</StyledLink>
             </StyledFlex>
           </ListItem>
 
           <ListItem>
             <StyledFlex>
-              <Image src={Contacts} background={"white"} />
+              <Image src={Contacts} />
               <StyledLink to="/contact">Contacts</StyledLink>
             </StyledFlex>
           </ListItem>
 
           <ListItem>
-            <StyledFlex>
-              <Image src={setting} background={"white"} />
+            <StyledFlex _hover={{ Color: "blue" }}>
+              <Image src={setting} />
               <StyledLink to="/setting">Settings</StyledLink>
             </StyledFlex>
           </ListItem>
 
           <ListItem>
             <StyledFlex>
-              <Image src={sms} background={"white"} />
+              <Image src={sms} />
               <StyledLink to="/bulksms">Bulk sms</StyledLink>
             </StyledFlex>
           </ListItem>
@@ -173,7 +170,7 @@ function HeroSection() {
               placeItems={"center"}
               backgroundColor="white"
             >
-              <Image src={Phone} backgroundColor="white" />
+              <Image src={Phone} />
               <Text
                 fontSize="11px"
                 backgroundColor="white"
@@ -222,7 +219,7 @@ function HeroSection() {
                 Members
               </Text>
             </Wrapper>
-            <AddIcon w="13px" backgroundColor="white" />
+            <AddIcon w="13px" />
           </Flex>
         </Box>
 

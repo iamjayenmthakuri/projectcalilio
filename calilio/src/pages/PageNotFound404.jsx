@@ -18,7 +18,6 @@ const StyledText = styled(Text)`
   font-size: 18px;
   line-height: 28px;
   color: #101828;
-  background-color: white;
 `;
 const StyledImage = styled(Image)`
   size-adjust: 10px;
@@ -44,40 +43,23 @@ const StyledLink = styled(Link)`
 function PageNotFound() {
   return (
     <>
-      <Flex margin={15} bg={"white"} gap={1} alignItems={"center"}>
+      <Flex margin={15} gap={1} alignItems={"center"}>
         <StyledText>Page Not Found</StyledText>
       </Flex>
-      <Flex
-        backgroundColor={"white"}
-        alignItems="center"
-        justifyContent="center"
-      >
+      <Flex alignItems="center" justifyContent="center">
         <Container
           display={"grid"}
           maxW="container.md"
-          backgroundColor={"white"}
           placeItems={"center"}
           gap={4}
         >
-          <Grid
-            placeItems={"center"}
-            marginTop={"170px"}
-            backgroundColor={"white"}
-            gap={2}
-          >
-            <Heading as={"Heading"} background={"White"} fontSize={18}>
+          <Grid placeItems={"center"} marginTop={"170px"} gap={2}>
+            <Heading as={"Heading"} fontSize={18}>
               Page Not Found: 404 Error
             </Heading>
-            <Flex
-              gap={-2}
-              flexDirection={"column"}
-              alignItems={"center"}
-              backgroundColor={"white"}
-            >
-              <Text bg={"white"} fontSize={14}>
-                This page does not exist in your site.
-              </Text>
-              <Text bg={"whiteAlpha.900"}>please Try Again...</Text>
+            <Flex gap={-2} flexDirection={"column"} alignItems={"center"}>
+              <Text fontSize={14}>This page does not exist in your site.</Text>
+              <Text>please Try Again...</Text>
             </Flex>
 
             <StyledLink to="/">
