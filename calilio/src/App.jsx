@@ -23,7 +23,11 @@ function App() {
       <Routes>
         <Route path="/" element={<RootLayout />}>
           <Route index element={<Dashbord />} />
+          <Route path="contact" element={<Contact />} />
+
           <Route path="setting" element={<SettingSidebarLayout />}>
+            <Route index element={<Myaccount />} />
+            <Route path="myaccount" element={<Myaccount />} />
             <Route path="overview" element={<Overview />} />
             <Route path="mynumber" element={<Mynumber />} />
             <Route path="blocklist" element={<Blocklist />} />
@@ -32,9 +36,7 @@ function App() {
             <Route path="payment" element={<PaymentMethod />} />
             <Route path="audio" element={<Audio />} />
             <Route path="notification" element={<Notification />} />
-            <Route path="myaccount" element={<Myaccount />} />
           </Route>
-          <Route path="contact" element={<Contact />} />
           <Route path="bulksms" element={<Bulksms />} />
           <Route path="*" element={<PageNotFound />}></Route>
         </Route>
