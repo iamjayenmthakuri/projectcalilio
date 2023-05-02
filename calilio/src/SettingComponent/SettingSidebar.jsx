@@ -52,13 +52,15 @@ const StyledFlex = styled(Flex)`
   gap: 9px;
   justify-content: flex-start;
   background-color: #ffffff;
-
   padding: 4px;
+  &:hover ${StyledImage} {
+    background-color: var(--chakra-colors-gray-200);
+  }
   &:hover {
-    background-color: #c2bfbf;
+    background-color: var(--chakra-colors-gray-200);
   }
   &:active {
-    background-color: #2c4b27;
+    background-color: var(--chakra-colors-gray-200);
   }
 `;
 

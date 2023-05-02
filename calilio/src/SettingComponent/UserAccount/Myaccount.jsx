@@ -1,11 +1,10 @@
-import { Flex, Text, Image, Grid } from "@chakra-ui/react";
+import { Flex, Text, Image, Grid, Container } from "@chakra-ui/react";
 import styled from "styled-components";
 import Avatarprofilephoto from "../../Images/Avatarprofilephoto.svg";
 import backgroundprofile from "../../Images/backgroundprofile.svg";
 
 const StyledFlex = styled(Flex)`
   width: 100%;
-
   box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
 `;
 const StyledText = styled(Text)`
@@ -37,13 +36,27 @@ function Myaccount() {
         <StyledImage />
         <Flex h={"min-content"}>
           <Image src={Avatarprofilephoto} boxSize={152} marginTop={"-65px"} />
-          <Grid>
-            <StyledText color={"#101828"}></StyledText>
-            Olivia Rhye
-            <Text fontSize={12}>olivia@calilio.com</Text>
+          <Grid padding={2}>
+            <Text fontSize={26} color="#101828" fontWeight={600}>
+              {" "}
+              Olivia Rhye
+            </Text>
+            <Text fontSize={13} marginTop={"-17px"} color={"#344054"}>
+              olivia@calilio.com
+            </Text>
           </Grid>
         </Flex>
       </Grid>
+      <Container>
+        <Grid>
+          <Text color={"#344054"} fontWeight={500} fontSize={14}>
+            Personal info
+          </Text>
+          <Text color={"#344054"} fontSize={12}>
+            Update your personal details.
+          </Text>
+        </Grid>
+      </Container>
     </>
   );
 }
