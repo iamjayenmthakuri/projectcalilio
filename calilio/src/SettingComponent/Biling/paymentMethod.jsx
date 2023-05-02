@@ -1,20 +1,21 @@
-import { Flex, Image, Text } from "@chakra-ui/react";
-import styled from "styled-components";
-import payment from "../../Images/payment.svg";
+import overview from "../../Images/payment.svg";
 
-const StyledText = styled(Text)`
-  background-color: white;
-`;
+import number from "../../Images/chat.svg";
 
-const StyledImage = styled(Image)``;
-
-const PaymentMethod = () => {
+import EmptyComponent from "../../helpers/emptyState";
+function PaymentMethod() {
   return (
-    <Flex margin={15} bg={"white"} gap={2} alignItems={"center"}>
-      <StyledText>Payment Method</StyledText>
-      <StyledImage src={payment} bg={"white"} />
-    </Flex>
+    <>
+      <EmptyComponent
+        headTitle="Payment Method"
+        headImageUrl={overview}
+        mainImageUrl={number}
+        mainTitle="No numbers is done yet"
+        message="You haven't done any payment yet. Any payment you've "
+        subMessage=" done will appear here."
+      />
+    </>
   );
-};
+}
 
 export default PaymentMethod;

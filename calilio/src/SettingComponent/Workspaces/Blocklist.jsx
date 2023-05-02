@@ -1,18 +1,18 @@
-import { Flex, Image, Text } from "@chakra-ui/react";
-import styled from "styled-components";
-import overview from "../../Images/dashbord.svg";
-
-const StyledText = styled(Text)`
-  background-color: white;
-`;
-const StyledImage = styled(Image)``;
-
+import blocklist from "../../Images/blocklist.svg";
+import mainblocklist from "../../Images/mainblocklist.svg";
+import EmptyComponent from "../../helpers/emptyState";
 function Blocklist() {
   return (
-    <Flex margin={15} bg={"white"} gap={2} alignItems={"center"}>
-      <StyledText>Block List</StyledText>
-      <StyledImage src={overview} bg={"white"} />
-    </Flex>
+    <>
+      <EmptyComponent
+        headTitle="Block List"
+        headImageUrl={blocklist}
+        mainImageUrl={mainblocklist}
+        mainTitle="No Blocked Contacts"
+        message="You don’t have any blocked contacts. Any contacts that"
+        subMessage=" you block will appear here."
+      />
+    </>
   );
 }
 

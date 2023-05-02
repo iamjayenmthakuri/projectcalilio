@@ -1,18 +1,19 @@
-import { Flex, Image, Text } from "@chakra-ui/react";
-import styled from "styled-components";
-import overview from "../../Images/dashbord.svg";
+import dashbord from "../../Images/dashbord.svg";
+import overview from "../../Images/logomark.svg";
 
-const StyledText = styled(Text)`
-  background-color: white;
-`;
-const StyledImage = styled(Image)``;
-
+import EmptyComponent from "../../helpers/emptyState";
 function Overview() {
   return (
-    <Flex margin={15} bg={"white"} gap={2} alignItems={"center"}>
-      <StyledText>OverView</StyledText>
-      <StyledImage src={overview} bg={"white"} />
-    </Flex>
+    <>
+      <EmptyComponent
+        headTitle="Overview"
+        headImageUrl={dashbord}
+        mainImageUrl={overview}
+        mainTitle="This is overview page"
+        message="You can take a brief look of your page. The main contacts"
+        subMessage=" that you want will appear here."
+      />
+    </>
   );
 }
 

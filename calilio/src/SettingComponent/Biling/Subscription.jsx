@@ -1,18 +1,20 @@
-import { Flex, Image, Text } from "@chakra-ui/react";
-import styled from "styled-components";
 import subscription from "../../Images/subscription.svg";
 
-const StyledText = styled(Text)`
-  background-color: white;
-`;
-const StyledImage = styled(Image)``;
+import number from "../../Images/contact.svg";
 
+import EmptyComponent from "../../helpers/emptyState";
 function Subscription() {
   return (
-    <Flex margin={15} bg={"white"} gap={2} alignItems={"center"}>
-      <StyledText>Subscription</StyledText>
-      <StyledImage src={subscription} bg={"white"} />
-    </Flex>
+    <>
+      <EmptyComponent
+        headTitle="Subscription"
+        headImageUrl={subscription}
+        mainImageUrl={number}
+        mainTitle="There is no Subscription yet "
+        message="There isn't any subscription yet. Any subscription you've "
+        subMessage=" done  will appear here."
+      />
+    </>
   );
 }
 

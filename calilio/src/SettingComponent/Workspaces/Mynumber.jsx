@@ -1,19 +1,21 @@
-import { Flex, Image, Text } from "@chakra-ui/react";
-import styled from "styled-components";
-import overview from "../../Images/dashbord.svg";
+import overview from "../../Images/mynumber.svg";
 
-const StyledText = styled(Text)`
-  background-color: white;
-`;
-const StyledImage = styled(Image)``;
+import number from "../../Images/mainblocklist.svg";
 
-function Mynumber() {
+import EmptyComponent from "../../helpers/emptyState";
+function Blocklist() {
   return (
-    <Flex margin={15} bg={"white"} gap={2} alignItems={"center"}>
-      <StyledText>My Number</StyledText>
-      <StyledImage src={overview} bg={"white"} />
-    </Flex>
+    <>
+      <EmptyComponent
+        headTitle="My number"
+        headImageUrl={overview}
+        mainImageUrl={number}
+        mainTitle="No numbers in contact"
+        message="You don’t have any number in contacts. Any contacts numbers"
+        subMessage=" that you add will appear here."
+      />
+    </>
   );
 }
 
-export default Mynumber;
+export default Blocklist;

@@ -1,19 +1,19 @@
-import { Flex, Image, Text } from "@chakra-ui/react";
-import styled from "styled-components";
-import overview from "../../Images/dashbord.svg";
-
-const StyledText = styled(Text)`
-  background-color: white;
-`;
-const StyledImage = styled(Image)``;
-
-function Member() {
+import overview from "../../Images/member.svg";
+import member from "../../Images/chat.svg";
+import EmptyComponent from "../../helpers/emptyState";
+function Blocklist() {
   return (
-    <Flex margin={15} bg={"white"} gap={2} alignItems={"center"}>
-      <StyledText>Member</StyledText>
-      <StyledImage src={overview} bg={"white"} />
-    </Flex>
+    <>
+      <EmptyComponent
+        headTitle="Member"
+        headImageUrl={overview}
+        mainImageUrl={member}
+        mainTitle="No members in contact"
+        message="You don’t have any member in contacts. Any contacts members"
+        subMessage=" that you add will appear here."
+      />
+    </>
   );
 }
 
-export default Member;
+export default Blocklist;
