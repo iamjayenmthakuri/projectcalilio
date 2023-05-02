@@ -1,14 +1,12 @@
-import overview from "../../Images/mynumber.svg";
-
-import number from "../../Images/mainblocklist.svg";
-
+import number from "../../Images/mynumber.svg";
 import EmptyComponent from "../../helpers/emptyState";
-function Blocklist() {
+
+function Mynumber() {
   return (
     <>
       <EmptyComponent
         headTitle="My number"
-        headImageUrl={overview}
+        headImageUrl={number}
         mainImageUrl={number}
         mainTitle="No numbers in contact"
         message="You don’t have any number in contacts. Any contacts numbers"
@@ -18,4 +16,4 @@ function Blocklist() {
   );
 }
 
-export default Blocklist;
+export default Mynumber;

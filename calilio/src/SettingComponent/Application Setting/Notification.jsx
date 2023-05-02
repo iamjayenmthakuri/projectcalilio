@@ -1,18 +1,18 @@
-import { Flex, Image, Text } from "@chakra-ui/react";
-import styled from "styled-components";
 import notification from "../../Images/notification.svg";
-
-const StyledText = styled(Text)`
-  background-color: white;
-`;
-const StyledImage = styled(Image)``;
+import EmptyComponent from "../../helpers/emptyState";
 
 function Notification() {
   return (
-    <Flex margin={15} bg={"white"} gap={2} alignItems={"center"}>
-      <StyledText>Notification</StyledText>
-      <StyledImage src={notification} bg={"white"} />
-    </Flex>
+    <>
+      <EmptyComponent
+        headTitle="Notification"
+        headImageUrl={notification}
+        mainImageUrl={notification}
+        mainTitle="There is not any Notification added"
+        message="There isn't any notification for you. Any kind of "
+        subMessage="notification will appear here."
+      />
+    </>
   );
 }
 

@@ -1,12 +1,12 @@
-import overview from "../../Images/member.svg";
-import member from "../../Images/chat.svg";
+import member from "../../Images/member.svg";
 import EmptyComponent from "../../helpers/emptyState";
-function Blocklist() {
+
+function Member() {
   return (
     <>
       <EmptyComponent
         headTitle="Member"
-        headImageUrl={overview}
+        headImageUrl={member}
         mainImageUrl={member}
         mainTitle="No members in contact"
         message="You don’t have any member in contacts. Any contacts members"
@@ -16,4 +16,4 @@ function Blocklist() {
   );
 }
 
-export default Blocklist;
+export default Member;

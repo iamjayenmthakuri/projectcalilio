@@ -1,18 +1,18 @@
-import { Flex, Image, Text } from "@chakra-ui/react";
-import styled from "styled-components";
 import headphone from "../../Images/headphone.svg";
-
-const StyledText = styled(Text)`
-  background-color: white;
-`;
-const StyledImage = styled(Image)``;
+import EmptyComponent from "../../helpers/emptyState";
 
 function Audio() {
   return (
-    <Flex margin={15} bg={"white"} gap={2} alignItems={"center"}>
-      <StyledText>Audio</StyledText>
-      <StyledImage src={headphone} bg={"white"} />
-    </Flex>
+    <>
+      <EmptyComponent
+        headTitle="Audio"
+        headImageUrl={headphone}
+        mainImageUrl={headphone}
+        mainTitle="There is no Audio added yet "
+        message="There isn't any audio added yet. Any audio you've "
+        subMessage=" added will appear here."
+      />
+    </>
   );
 }
 

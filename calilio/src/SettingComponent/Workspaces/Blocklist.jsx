@@ -1,7 +1,8 @@
 import blocklist from "../../Images/blocklist.svg";
 import mainblocklist from "../../Images/mainblocklist.svg";
 import EmptyComponent from "../../helpers/emptyState";
-function Blocklist() {
+
+function Useraccount() {
   return (
     <>
       <EmptyComponent
@@ -16,4 +17,4 @@ function Blocklist() {
   );
 }
 
-export default Blocklist;
+export default Useraccount;
