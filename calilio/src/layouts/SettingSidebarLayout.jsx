@@ -9,7 +9,7 @@ const StyledFlex = styled(Flex)`
   border-right: 1px solid #d0d5dd;
   border-radius: 8px;
   width: 100%;
-  height: 1095.66663px;
+  height: 1103.9px;
   gap: 1px;
 `;
 
@@ -23,7 +23,7 @@ const SettingSidebarLayout = () => {
   return (
     <StyledFlex bg={" #5964ff"}>
       <Box
-        w={"26%"}
+        w={"25%"}
         bg={"white"}
         borderRadius={"0 0 0 8px"}
         boxShadow=" 0px 1px 0px rgba(0, 0, 0, 0.25),

@@ -23,7 +23,7 @@ import myaccount from "../Images/myaccount.svg";
 const StyledText = styled(Text)`
   font-style: normal;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 17px;
   line-height: 28px;
   color: #101828;
   background-color: white;
@@ -37,7 +37,7 @@ const StyledTitle = styled(Text)`
 `;
 
 const StyledButton = styled(Button)`
-  width: 210px;
+  width: 200px;
 
   &:hover ${StyledImage} {
     background-color: var(--chakra-colors-gray-200);
@@ -49,7 +49,7 @@ const StyledButton = styled(Button)`
 
 const StyledFlex = styled(Flex)`
   align-items: center;
-  gap: 11px;
+  gap: 9px;
   justify-content: flex-start;
   background-color: #ffffff;
 
@@ -79,7 +79,7 @@ const SettingSidebar = () => {
       backgroundColor={"white"}
       gap={6}
       padding={3}
-      borderRadius={"8px 0 0 0"}
+      borderRadius={"8px 0px 0px 0px"}
     >
       <Flex bg={"white"} gap={2} alignItems={"center"}>
         <StyledText fontWeight={700}>Settings</StyledText>
@@ -88,12 +88,12 @@ const SettingSidebar = () => {
       <SimpleGrid
         placeItems={"left"}
         backgroundColor={"white"}
-        gap={7}
+        gap={8}
         paddingLeft={6}
       >
         <Flex
           flexDirection={"column"}
-          gap={2}
+          gap={3}
           backgroundColor={"white"}
           marginLeft={-6}
         >
@@ -105,7 +105,7 @@ const SettingSidebar = () => {
               color={"white"}
               gap={2}
               bg={"#5964FF"}
-              width={"103%"}
+              width={"98%"}
               display={"flex"}
               justifyContent={"flex-start"}
             >

@@ -102,7 +102,7 @@ function HeroSection() {
 
   return (
     <Flex flexDirection={"column"} gap={-1}>
-      <StyledBox width=" 280px" height=" 970px" bgColor="white" padding="2rem">
+      <StyledBox width=" 260px" height=" 970px" bgColor="white" padding="2rem">
         <List>
           <ListItem>
             <StyledFlex>
@@ -142,24 +142,25 @@ function HeroSection() {
           >
             <Wrapper>
               <StyledIcon
-                w="29px"
+                w="20px"
                 ml={"-19px"}
                 mt="4px"
                 backgroundColor="white"
                 onClick={toggleHideMode}
               />
               <Text
+                as="div"
+                w="185px"
                 cursor={"pointer"}
-                w="200px"
                 backgroundColor="white"
                 fontWeight="600"
-                ml="2px"
+                pl="2px"
                 onClick={toggleHideMode}
               >
                 Numbers
               </Text>
             </Wrapper>
-            <AddIcon w="15px" backgroundColor="white" />
+            <AddIcon w="13px" backgroundColor="white" />
           </Flex>
           {isHideModeEnabaled ? (
             <SimpleGrid
@@ -168,13 +169,13 @@ function HeroSection() {
               borderRadius=" 8px "
               marginTop="18px"
               height="100px"
-              minChildWidth="220px"
+              minChildWidth="190px"
               placeItems={"center"}
               backgroundColor="white"
             >
               <Image src={Phone} backgroundColor="white" />
               <Text
-                fontSize="12px"
+                fontSize="11px"
                 backgroundColor="white"
                 color="#667085"
                 fontWeight="400px"
@@ -182,7 +183,7 @@ function HeroSection() {
                 You don't have any numbers in this
               </Text>
               <Text
-                fontSize="12px"
+                fontSize="11px"
                 backgroundColor="white"
                 color="#667085"
                 fontWeight="400px"
@@ -199,11 +200,11 @@ function HeroSection() {
             align="center"
             color="rgba(52, 64, 84, 1)"
             backgroundColor="white"
-            marginTop="26px"
+            marginTop="24px"
           >
             <Wrapper>
               <StyledIcon
-                w="29px"
+                w="20px"
                 mt="4px"
                 ml={"-19px"}
                 backgroundColor="white"
@@ -211,7 +212,7 @@ function HeroSection() {
               />
               <Text
                 as="div"
-                w="200px"
+                w="185px"
                 cursor={"pointer"}
                 backgroundColor="white"
                 fontWeight="600"
@@ -221,19 +222,19 @@ function HeroSection() {
                 Members
               </Text>
             </Wrapper>
-            <AddIcon w="15px" backgroundColor="white" />
+            <AddIcon w="13px" backgroundColor="white" />
           </Flex>
         </Box>
 
         {isSecondHideModeEnabaled ? (
           <Flex
-            gap="10px"
+            gap="5px"
             marginTop="20px"
             align="center"
             backgroundColor="white"
           >
             <Image src={activeprofile} backgroundColor="white" />
-            <Text fontSize="13px" fontWeight="500" backgroundColor="white">
+            <Text fontSize="12px" fontWeight="500" backgroundColor="white">
               Olivia Maiden Rhye (You)
             </Text>
           </Flex>
@@ -241,22 +242,22 @@ function HeroSection() {
       </StyledBox>
       <StyledFlexed
         gap={3}
-        width={"279.9px"}
+        width={"259.9px"}
         alignItems={"center"}
         backgroundColor={"white"}
         marginBottom="8px"
-        padding={"16px"}
+        padding={"20px"}
         marginTop={"-14px"}
         borderRadius={"0 0 8px 8px"}
       >
         <Image src={activeprofile} backgroundColor="white" />
-        <Text fontWeight="700" backgroundColor="white" fontSize="14px">
+        <Text fontWeight="700" backgroundColor="white" fontSize="11px">
           Olivia Maidye....
         </Text>
         <Flex justifyContent={"space-around"} gap={2} backgroundColor={"white"}>
-          <StyledImage src={Mic} boxSize={5} />
-          <StyledImage src={Headphone} boxSize={5} />
-          <StyledImage src={setting} boxSize={5} />
+          <StyledImage src={Mic} boxSize={4} />
+          <StyledImage src={Headphone} boxSize={4} />
+          <StyledImage src={setting} boxSize={4} />
         </Flex>
       </StyledFlexed>
     </Flex>

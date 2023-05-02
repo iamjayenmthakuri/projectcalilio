@@ -7,7 +7,7 @@ const Sidebar = () => {
     <SimpleGrid>
       <Box
         mt="10px"
-        w={{ base: "50px", sm: "180px", md: "280px" }}
+        w={{ base: "50px", sm: "180px", md: "260px" }}
         h="64px"
         borderRadius="5px"
         bg="white"

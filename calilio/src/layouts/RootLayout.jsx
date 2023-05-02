@@ -5,11 +5,11 @@ import Sidebar from "../components/Sidebar";
 
 const RootLayout = () => {
   return (
-    <Flex w="100%" gap={{ sm: "25px", md: "30px", lg: "5px" }}>
-      <Box w={{ sm: "10px", md: "40px", lg: "60px" }}>
+    <Flex w="100%" gap={{ sm: "25px", md: "10px", lg: "5px" }} bg={" #5964ff"}>
+      <Box w={{ sm: "10px", md: "40px", lg: "59px" }}>
         <ProfileBar />
       </Box>
-      <Box w={{ sm: "40px", md: "250px", lg: "290px" }}>
+      <Box w={{ sm: "40px", md: "250px", lg: "250px" }}>
         <Sidebar />
       </Box>
       <Box
