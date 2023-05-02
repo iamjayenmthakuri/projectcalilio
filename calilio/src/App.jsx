@@ -15,6 +15,7 @@ import PaymentMethod from "./SettingComponent/Biling/paymentMethod";
 import Audio from "./SettingComponent/Application Setting/Audio";
 import Notification from "./SettingComponent/Application Setting/Notification";
 import PageNotFound from "./pages/PageNotFound404";
+import Myaccount from "./SettingComponent/UserAccount/Myaccount";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
             <Route path="payment" element={<PaymentMethod />} />
             <Route path="audio" element={<Audio />} />
             <Route path="notification" element={<Notification />} />
+            <Route path="myaccount" element={<Myaccount />} />
           </Route>
           <Route path="contact" element={<Contact />} />
           <Route path="bulksms" element={<Bulksms />} />

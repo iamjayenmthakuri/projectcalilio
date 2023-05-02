@@ -100,18 +100,19 @@ const SettingSidebar = () => {
           <Text bg={"white"} fontWeight={600}>
             User Settings
           </Text>
-
-          <StyledButton
-            color={"white"}
-            gap={2}
-            bg={"#5964FF"}
-            width={"103%"}
-            display={"flex"}
-            justifyContent={"flex-start"}
-          >
-            <StyledImage src={myaccount} />
-            <StyledTitle>My Account</StyledTitle>
-          </StyledButton>
+          <StyledLink to="myaccount">
+            <StyledButton
+              color={"white"}
+              gap={2}
+              bg={"#5964FF"}
+              width={"103%"}
+              display={"flex"}
+              justifyContent={"flex-start"}
+            >
+              <StyledImage src={myaccount} />
+              <StyledTitle>My Account</StyledTitle>
+            </StyledButton>
+          </StyledLink>
         </Flex>
         <List spacing={2} bg={"white"}>
           <Text bg={"white"} fontWeight={600}>
