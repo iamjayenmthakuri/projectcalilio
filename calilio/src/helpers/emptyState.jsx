@@ -49,7 +49,9 @@ function EmptyComponent(props) {
             backgroundColor={"white"}
             gap={2}
           >
-            <Image src={mainImageUrl} boxSize={134} background={"White"} />
+            {mainImageUrl && (
+              <Image src={mainImageUrl} boxSize={134} background={"White"} />
+            )}
             <Heading as={"Heading"} background={"White"} fontSize={18}>
               {mainTitle}
             </Heading>

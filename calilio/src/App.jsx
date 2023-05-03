@@ -16,11 +16,13 @@ import Audio from "./SettingComponent/Application Setting/Audio";
 import Notification from "./SettingComponent/Application Setting/Notification";
 import PageNotFound from "./pages/PageNotFound404";
 import Myaccount from "./SettingComponent/UserAccount/Myaccount";
+// import Signup from "./pages/USer Auth/Signup";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
+        {/* <Route index element={<Signup />} /> */}
         <Route path="/" element={<RootLayout />}>
           <Route index element={<Dashbord />} />
           <Route path="contact" element={<Contact />} />
