@@ -86,7 +86,7 @@ function Myaccount() {
               <FormLabel fontSize={14}>Full Name</FormLabel>
               <Input type="text" placeholder="Olivia Rhye" />
 
-              <FormLabel fontSize={14} mt={5}>
+              <FormLabel fontSize={14} mt={4}>
                 Email address
               </FormLabel>
 
