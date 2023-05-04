@@ -27,7 +27,7 @@ const SettingSidebarLayout = () => {
         <SettingSidebar />
       </Box>
 
-      <StyledBox bg={"white"}>
+      <StyledBox bg={"white"} flexFlow={1}>
         <Outlet />
       </StyledBox>
     </StyledFlex>

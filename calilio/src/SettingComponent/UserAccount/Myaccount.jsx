@@ -44,13 +44,13 @@ const StyledImage = styled(Image)`
 function Myaccount() {
   return (
     <>
-      <Grid backgroundColor={"white"}>
-        <StyledFlex bg={"white"} gap={2}>
+      <Grid>
+        <StyledFlex bg={"white"} gap={2} borderRadius="0 8px 0 0">
           <StyledText>My account</StyledText>
         </StyledFlex>
 
         <StyledImage />
-        <Flex h={"min-content"}>
+        <Flex h={"min-content"} mt={1}>
           <Image src={Avatarprofilephoto} boxSize={152} marginTop={"-65px"} />
           <Grid padding={2}>
             <Text fontSize={26} color="#101828" fontWeight={600}>
@@ -68,7 +68,7 @@ function Myaccount() {
         gap={6}
         mt={4}
         w={"100%"}
-        padding={3}
+        padding={2}
       >
         <Box w="140px" ml="-50px">
           <Text fontSize={14}>Personal info</Text>
