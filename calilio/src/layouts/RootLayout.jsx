@@ -9,7 +9,7 @@ const RootLayout = () => {
       <Box w={{ sm: "10px", md: "40px", lg: "59px" }}>
         <ProfileBar />
       </Box>
-      <Box w={{ sm: "40px", md: "250px", lg: "250px" }}>
+      <Box w={{ sm: "40px", md: "250px", lg: "251px" }}>
         <Sidebar />
       </Box>
       <Box

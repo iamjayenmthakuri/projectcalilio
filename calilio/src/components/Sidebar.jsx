@@ -7,7 +7,7 @@ const Sidebar = () => {
     <SimpleGrid>
       <Box
         mt="10px"
-        w={{ base: "50px", sm: "180px", md: "260px" }}
+        w={{ base: "50px", sm: "180px", md: "257px" }}
         h="64px"
         borderRadius="5px"
         bg="white"
@@ -50,9 +50,10 @@ const Sidebar = () => {
           alt="Phone"
           border="3px solid #ffffff"
           backgroundColor="#ffffff"
-          mt="5px"
+          mt="4px"
         />
       </Box>
+
       <HeroSection />
     </SimpleGrid>
   );

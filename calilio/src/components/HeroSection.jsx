@@ -99,7 +99,7 @@ function HeroSection() {
 
   return (
     <Flex flexDirection={"column"} gap={-1}>
-      <StyledBox width=" 260px" height=" 970px" bgColor="white" padding="2rem">
+      <StyledBox width=" 257px" height=" 970px" bgColor="white" padding="2rem">
         <List>
           <ListItem>
             <StyledFlex>
@@ -239,7 +239,7 @@ function HeroSection() {
       </StyledBox>
       <StyledFlexed
         gap={3}
-        width={"259.9px"}
+        width={"257px"}
         alignItems={"center"}
         backgroundColor={"white"}
         marginBottom="8px"

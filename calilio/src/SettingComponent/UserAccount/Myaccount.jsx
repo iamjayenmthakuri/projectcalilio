@@ -1,16 +1,23 @@
+/* eslint-disable react/no-children-prop */
 import {
   Flex,
   Text,
   Image,
   Grid,
   Container,
-  Button,
   Input,
   Box,
+  FormControl,
+  FormLabel,
+  InputGroup,
+  InputLeftElement,
+  Button,
 } from "@chakra-ui/react";
 import styled from "styled-components";
 import Avatarprofilephoto from "../../Images/Avatarprofilephoto.svg";
 import backgroundprofile from "../../Images/backgroundprofile.svg";
+
+import Mailplaceholder from "../../Images/mailplaceholder";
 
 const StyledFlex = styled(Flex)`
   width: 100%;
@@ -21,7 +28,7 @@ const StyledText = styled(Text)`
 
   margin-left: 15px;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 48px;
   color: #344054;
 `;
@@ -32,122 +39,6 @@ const StyledImage = styled(Image)`
   margin-top: 10px;
   margin-left: 5px;
   height: 120px;
-`;
-const MyAccountWrapper = styled(Container)`
-  background-color: white;
-  width: 870px;
-  border-radius: 0 8px 8px 0;
-`;
-// const MyAccountComponent = styled.div``;
-// const Heading = styled.div`
-//   padding: 16px 24px;
-//   border-bottom: 1px solid #d0d5dd;
-//   h2 {
-//     font-weight: 700;
-//     font-size: 18px;
-//     color: #344054;
-//   }
-// `;
-// const AccountContent = styled.div``;
-// const BackgroundBox = styled.div`
-//   margin: 7px;
-//   border-radius: 8px 8px 0 0;
-//   background-image: url(${BgImage});
-//   width: 856px;
-//   height: 200px;
-//   position: relative;
-// `;
-const PersonelInfo = styled(Box)`
-  display: flex;
-  flex-direction: column;
-`;
-// const MyNameWrapper = styled(Container)`
-//   position: relative;
-//   height: 70px;
-// `;
-// const MyName = styled(Text)`
-//   position: absolute;
-//   left: 190px;
-//   height: 100px;
-//   span {
-//     font-size: 30px;
-//     font-weight: 600px;
-//     line-height: 38px;
-//     color: #101828;
-//   }
-//   p {
-//     font-weight: 400;
-//     font-size: 16px;
-//     color: #475467;
-//     line-height: 24px;
-//   }
-// `;
-const InputField = styled.div`
-  padding: 30px;
-  display: flex;
-  width: 100%;
-  height: 212px;
-`;
-const InputText = styled.div`
-  padding-right: 20px;
-  span {
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 20px;
-    color: #344054;
-  }
-  p {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 20px;
-    color: #475467;
-  }
-`;
-const InputBox = styled(Box)`
-  padding: 24px;
-`;
-const IfullName = styled(Text)`
-  padding-bottom: 12px;
-  p {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 20px;
-    padding-bottom: 8px;
-  }
-`;
-const EmailAddress = styled.div`
-  p {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 20px;
-    padding-bottom: 8px;
-  }
-`;
-const Password = styled.div`
-  padding: 30px;
-  display: flex;
-  align-items: center;
-`;
-const PasswordText = styled.div`
-  padding-right: 32px;
-  span {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 20px;
-    color: #344054;
-  }
-  p {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    color: #6e6681;
-  }
-`;
-const PasswordButton = styled.div``;
-const MyButton = styled(Button)`
-  font-weight: 600;
-  line-height: 20px;
-  color: blue;
 `;
 
 function Myaccount() {
@@ -171,45 +62,56 @@ function Myaccount() {
           </Grid>
         </Flex>
       </Grid>
-      <MyAccountWrapper>
-        <PersonelInfo>
-          <InputField>
-            <InputText>
-              <Text>Personel info</Text>
-              <span>Update your personal details.</span>
-            </InputText>
-            <InputBox>
-              <IfullName>
-                <Text>Full name</Text>
-                <Input
-                  placeholder="Your name"
-                  padding="10px 14px"
-                  width="521px"
-                  height="44px"
+      <Container
+        display={"flex"}
+        justifyContent={"start"}
+        gap={6}
+        mt={4}
+        w={"100%"}
+        padding={3}
+      >
+        <Box w="140px" ml="-50px">
+          <Text fontSize={14}>Personal info</Text>
+          <Text fontSize={10} color={" #6E6681"}>
+            Update your personal details.
+          </Text>
+        </Box>
+        <Grid flexGrow={1} padding={2}>
+          <FormControl
+            padding={1}
+            boxShadow="0 0 2px rgba(0, 0, 0, 0.4)"
+            borderRadius="8px"
+          >
+            <Box padding={2}>
+              <FormLabel fontSize={14}>Full Name</FormLabel>
+              <Input type="text" placeholder="Olivia Rhye" />
+
+              <FormLabel fontSize={14} mt={5}>
+                Email address
+              </FormLabel>
+
+              <InputGroup>
+                <InputLeftElement
+                  pointerEvents="none"
+                  children={<Mailplaceholder />}
                 />
-              </IfullName>
-              <EmailAddress>
-                <Text>Email address</Text>
-                <Input
-                  placeholder="Your email"
-                  padding="10px 14px"
-                  width="521px"
-                  height="44px"
-                />
-              </EmailAddress>
-            </InputBox>
-          </InputField>
-          <Password>
-            <PasswordText>
-              <span>Password</span>
-              <p>Choose a strong password</p>
-            </PasswordText>
-            <PasswordButton>
-              <MyButton fontSize="14px">Change Password</MyButton>
-            </PasswordButton>
-          </Password>
-        </PersonelInfo>
-      </MyAccountWrapper>
+                <Input type="tel" placeholder="email address" />
+              </InputGroup>
+            </Box>
+          </FormControl>
+        </Grid>
+      </Container>
+      <Flex gap={10} mt={5} ml={10} justifyContent={"start"}>
+        <Grid>
+          <Text fontSize={14}>Password</Text>
+          <Text fontSize={10} color={" #6E6681"}>
+            Choose a strong Password
+          </Text>
+        </Grid>
+        <Button color={"#0011FC"} fontSize={14} bg={"#E8EAFF"}>
+          Change Password
+        </Button>
+      </Flex>
     </>
   );
 }

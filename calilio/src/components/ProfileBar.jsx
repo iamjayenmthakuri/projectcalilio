@@ -39,7 +39,7 @@ const ProfileBar = () => {
       w="50px"
       h="100vh"
       mt="8px"
-      ml="13px"
+      ml="8px"
     >
       <Image src={logo} boxSize={10} mt="10px" mb="10px" bg="#5964ff" />
       <Circle>
