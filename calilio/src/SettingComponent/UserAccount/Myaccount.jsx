@@ -1,4 +1,5 @@
 /* eslint-disable react/no-children-prop */
+
 import {
   Flex,
   Text,
@@ -12,13 +13,20 @@ import {
   InputGroup,
   InputLeftElement,
   Button,
+  useDisclosure,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
 } from "@chakra-ui/react";
 import styled from "styled-components";
 import Avatarprofilephoto from "../../Images/Avatarprofilephoto.svg";
 import backgroundprofile from "../../Images/backgroundprofile.svg";
-
+import changePassword from "../../Images/changepassword.svg";
 import Mailplaceholder from "../../Images/mailplaceholder";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 const StyledFlex = styled(Flex)`
   width: 100%;
@@ -41,8 +49,16 @@ const StyledImage = styled(Image)`
   margin-left: 5px;
   height: 120px;
 `;
+const StyledModal = styled(Modal)`
+  display: grid;
+  place-items: center;
+`;
 
 function Myaccount() {
+  const initialRef = useRef(null);
+  const finalRef = useRef(null);
+  const { isOpen, onOpen } = useDisclosure();
+
   const [name, setName] = useState("Oliviya Ryhe");
   const [email, setEmail] = useState("olivia@gmali.com");
   const [newName, setNewName] = useState("");
@@ -51,21 +67,23 @@ function Myaccount() {
 
   const handleNameChange = (event) => {
     setNewName(event.target.value);
+    setShow(true);
   };
 
   const handleEmailChange = (event) => {
     setNewEmail(event.target.value);
+    setShow(true);
   };
 
   const handleSaveChanges = () => {
     setName(newName);
     setEmail(newEmail);
-    setShow(!show);
+    setShow(false);
   };
   const handleCancel = () => {
     setNewName(name);
     setNewEmail(email);
-    setShow(!show);
+    setShow(false);
   };
 
   return (
@@ -112,7 +130,7 @@ function Myaccount() {
               <FormLabel fontSize={14}>Full Name</FormLabel>
               <Input
                 type="text"
-                placeholder="Olivia Rhye"
+                placeholder={name}
                 value={newName}
                 onChange={handleNameChange}
               />
@@ -128,13 +146,13 @@ function Myaccount() {
                 />
                 <Input
                   type="tel"
-                  placeholder="olivia@calilio.com"
+                  placeholder={email}
                   onChange={handleEmailChange}
                   value={newEmail}
                 />
               </InputGroup>
             </Box>
-            {!!show ? (
+            {show && (
               <Flex justifyContent={"end"} gap={3} mr={2} padding={1}>
                 <Button
                   color={" #344054"}
@@ -156,7 +174,7 @@ function Myaccount() {
                   Save Changes
                 </Button>
               </Flex>
-            ) : null}
+            )}
           </FormControl>
         </Grid>
       </Container>
@@ -167,9 +185,66 @@ function Myaccount() {
             Choose a strong Password
           </Text>
         </Grid>
-        <Button color={"#0011FC"} fontSize={14} bg={"#E8EAFF"}>
+        <Button onClick={onOpen} color={"#0011FC"} fontSize={14} bg={"#E8EAFF"}>
           Change Password
         </Button>
+        <Grid placeItems={"center"}>
+          <StyledModal
+            initialFocusRef={initialRef}
+            finalFocusRef={finalRef}
+            isOpen={isOpen}
+          >
+            <ModalOverlay />
+            <ModalContent w={400}>
+              <ModalHeader display={"grid"} placeItems={"center"}>
+                <Image src={changePassword} />
+                Change Password
+                <Text color={" #6E6681"} fontSize={14} fontWeight={400}>
+                  Please enter your current password for verification
+                </Text>
+                <Text color={" #6E6681"} fontSize={14} fontWeight={400}>
+                  and create a new strong password
+                </Text>
+              </ModalHeader>
+
+              <ModalBody pb={6} placeItems={"center"} display={"grid"}>
+                <FormControl>
+                  <FormLabel color={" #344054"} fontSize={14}>
+                    Enter Current Password
+                  </FormLabel>
+                  <Input
+                    type="password"
+                    ref={initialRef}
+                    placeholder="current password"
+                  />
+                </FormControl>
+
+                <FormControl mt={4}>
+                  <FormLabel color={" #344054"} fontSize={14}>
+                    New Password
+                  </FormLabel>
+                  <Input type="password" placeholder="new password" />
+                </FormControl>
+                <FormControl mt={4}>
+                  <FormLabel color={" #344054"} fontSize={14}>
+                    Confirm Password
+                  </FormLabel>
+                  <Input type="password" placeholder="confirm password" />
+                </FormControl>
+              </ModalBody>
+
+              <ModalFooter
+                display={"flex"}
+                alignItems={"center"}
+                justifyContent={"center"}
+              >
+                <Button bg={"#5964FF"} color="#ffffff" fontSize={16}>
+                  Change Password
+                </Button>
+              </ModalFooter>
+            </ModalContent>
+          </StyledModal>
+        </Grid>
       </Flex>
     </>
   );
